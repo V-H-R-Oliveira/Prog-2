@@ -46,4 +46,9 @@ public class Controle {
     {
        this.setCanal(ncanal);
     }
+    
+     public void changeCanal(String ncanal)
+    {
+       this.setCanal(Integer.parseInt(ncanal));
+    }
 }
