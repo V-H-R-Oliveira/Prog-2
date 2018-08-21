@@ -1,1 +1,1 @@
-# Projetos da Disciplina de Programação 2
+# Projetos da disciplina de Programação 2
