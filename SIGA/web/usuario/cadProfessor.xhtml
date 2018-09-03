@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html"/>
+        <h:head>
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Cadastro de Professores</title>
+        </h:head>
+        <h:body>
+            <h1 style="text-align: center;">Cadastro de Professores</h1>
+            <h:form id="formPrincipal">
+                <p:outputLabel value="Nome: "/>
+                <p:inputText id="campoNomeProf" value="#{novoProfessor.professor.nome}" required="true" requiredMessage="Campo obrigatório" maxlength="20"/>
+                <br/>
+                <p:outputLabel value="RA(400xxx): "/>
+                <p:inputText id="campoRaProf" value="#{novoProfessor.professor.ra}" required="true" requiredMessage="Campo obrigatório" maxlength="6"/>
+                <br/>
+                <p:outputLabel value="Senha: "/>
+                <p:inputText id="campoSenhaProf" type="password" value="#{novoProfessor.professor.senha}" required="true" requiredMessage="Campo obrigatório" maxlength="20"/>
+                <br/>
+                <p:commandButton value="Cadastrar" action="#{novoProfessor.inserirProfessor()}" update="@form"/>
+                <br/>
+                <p:messages/>
+            </h:form>
+        </h:body>
+</html>

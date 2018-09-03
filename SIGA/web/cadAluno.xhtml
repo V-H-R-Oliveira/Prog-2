@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html"/>
+        <h:head>
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Cadastro de Alunos</title>
+        </h:head>
+        <h:body>
+            <h1 style="text-align: center;">Cadastro de alunos</h1>
+            <h:form>
+                <p:outputLabel value="Nome:"/>
+                <p:inputText id="campoNome" value="#{novoAluno.aluno.nome}" required="true" requiredMessage="Campo obrigatório" maxlength="20"/>
+                <br/>
+                <p:outputLabel value="RA(120xxx):"/>
+                <p:inputText id="campoRa" value="#{novoAluno.aluno.ra}" required="true" requiredMessage="Campo obrigatório" maxlength="6"/>
+                <br/> 
+                <p:outputLabel value="Nota:"/>
+                <p:inputText value="#{novoAluno.aluno.nota}" required="true" requiredMessage="Campo obrigatório"></p:inputText>
+                <br/>
+                <p:outputLabel value="Faltas:"/>
+                <p:inputText value="#{novoAluno.aluno.faltas}" required="true" requiredMessage="Campo obrigatório"></p:inputText>
+                <br/>
+                <p:outputLabel value="Turma:"/>
+                <p:inputText value="#{novoAluno.aluno.turma}" required="true" requiredMessage="Campo obrigatório"></p:inputText>
+                <br/>
+                <p:outputLabel value="Disciplina:"/>
+                <p:inputText value="#{novoAluno.aluno.disciplina}" required="true" requiredMessage="Campo obrigatório" maxlength="50"></p:inputText>
+                <br/>
+                <p:commandButton value="Cadastrar" action="#{novoAluno.inserirAluno()}" update="@form"/>
+                <br/>
+                <p:messages/>
+            </h:form>
+        </h:body>
+</html>
