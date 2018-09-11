@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Mural de notas</title>
+    </h:head>
+    <h:body> 
+        <h1 style="text-align: center;">Mural de notas</h1>
+        <br/>
+        <center>
+        <p:dataTable resizableColumns="true" tableStyle="width:auto" emptyMessage="Nenhum aluno cadastrado"
+                             var="aluno" value="#{novoAluno.lista}">
+                    <p:column headerText="Ra">
+                        <h:outputText value="#{aluno.ra}"/>
+                    </p:column>
+            
+                    <p:column headerText="Nome">
+                        <h:outputText value="#{aluno.nome}"/>
+                    </p:column>
+                    
+                    <p:column headerText="Nota">
+                        <h:outputText value="#{aluno.nota}"/>
+                    </p:column>
+            
+                    <p:column headerText="Falta">
+                        <h:outputText value="#{aluno.faltas}"/>
+                    </p:column>
+            
+                    <p:column headerText="Turma">
+                        <h:outputText value="#{aluno.turma}"/>
+                    </p:column>
+            
+                    <p:column headerText="Disciplina">
+                        <h:outputText value="#{aluno.disciplina}"/>
+                    </p:column>
+                </p:dataTable>
+            </center>
+    </h:body>
+</html>

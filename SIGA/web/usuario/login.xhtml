@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>SIGA - Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h1 style="text-align: center; color:blue;">Login</h1>
+            <h:form id="formLogin">
+                <p:outputLabel value="RA: "/>
+                <p:inputText id="ra" value="#{novoProfessor.professor.ra}" required="true" requiredMessage="Campo obrigatório" maxlength="6"/>
+                <br/>
+                <p:outputLabel value="Senha: "/>
+                <p:inputText id="senha" type="password" value="#{novoProfessor.professor.senha}" required="true" requiredMessage="Campo obrigatório" maxlength="20"/>
+                <br/>
+                <p:commandButton value="Logar" action="#{novoProfessor.logarProfessor()}" update="@form"/>
+                <br/>
+                <p:messages/>
+            </h:form>
+    </h:body>
+</html>

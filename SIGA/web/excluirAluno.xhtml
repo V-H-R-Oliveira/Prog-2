@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html"/>
+        <h:head>
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Excluir Aluno</title>
+        </h:head>
+        <h:body>
+            <h1 style="text-align: center; text-decoration: underline;">Excluir Aluno</h1>
+            <h:form>
+                <p:outputLabel value="Id: "/>
+                <p:inputText value="#{novoAluno.aluno.id}" required="true" requiredMessage="Campo obrigatório"/>
+                <br/>
+                <p:commandButton value="Excluir" action="#{novoAluno.excluir()}" update="@form"/>
+                <br/>
+                <p:messages/>
+            </h:form>
+        </h:body>
+</html>
